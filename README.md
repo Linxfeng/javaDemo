@@ -1,9 +1,17 @@
-# javaDemo
-some java demo
-一些java小demo
+# JavaDemo
 
-commit a simple activeMQ test demo
-提交了一个activeMQ的使用例子
+## 1. activemq
 
-spring cloud demo: eureka usage
-spring cloud相关：eureka注册中心的使用例子
+a simple activeMQ test demo
+
+一个简单的activeMQ使用示例
+
+## 2. SpringCloud
+
+some SpringCloud demo, but just committed the usage of eureka
+
+一些SpringCloud相关技术，目前只提交了eureka的使用示例
+
+- eureka： eureka注册中心,
+- eureka2： eureka注册中心2
+-  client：客户端
