@@ -14,4 +14,10 @@ some SpringCloud demo, but just committed the usage of eureka
 
 - eureka： eureka注册中心,
 - eureka2： eureka注册中心2
--  client：客户端
+- client：客户端
+
+## 3. test-rmi
+
+Java RMI Demo
+
+RMI（Remote Method Invocation，远程方法调用），是一种基于Java的远程方法调用技术，是Java特有的一种RPC实现。
