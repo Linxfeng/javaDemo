@@ -27,3 +27,10 @@ RMI（Remote Method Invocation，远程方法调用），是一种基于Java的�
 some about thread demo
 
 多线程和锁相关的练习demo。
+
+## 5. arithmetic
+
+some about arithmetic practice demo
+
+算法相关的练习demo。
+
