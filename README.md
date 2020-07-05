@@ -21,3 +21,9 @@ some SpringCloud demo, but just committed the usage of eureka
 Java RMI Demo
 
 RMI（Remote Method Invocation，远程方法调用），是一种基于Java的远程方法调用技术，是Java特有的一种RPC实现。
+
+## 4. thread-demo
+
+some about thread demo
+
+多线程和锁相关的练习demo。
