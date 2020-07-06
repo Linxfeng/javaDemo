@@ -26,24 +26,51 @@ public class ArithTest {
         //showNumbers("Jkdi234klowe90a3");//Jkdi*234*klowe*90*a*3*
         //System.out.println(sliptIntArray(new int[]{2, -3, 5, 5, -4, -4, 5}));//false
         //findMaxNum("abcd12345ed125ss123058789");//123058789,9
+        //findMaxNum("8749r6k4nugdm04p5b1yhegi8hiq3937");//87493937,4
+        //System.out.println(checkerboard(6-1, 3-1));
 
 
     }
 
     /**
+     * 棋盘走法：
+     * 给定m * n的棋盘，从左上角走到右下角，一共多少种走法
+     * 示例：2,2 -> 2; 3,3 -> 6, 4,3 -> 10, 6,3 -> 21
+     * 递归解法
+     */
+    public static int checkerboard(int m, int n) {
+        //从(m, n)走到(0,0)，每一步都有两种选择，总共走的步数是m+n
+        if (m == 0 && n == 0) {
+            return 0;
+        }
+        if (m == 0 || n == 0) {
+            return 1;
+        }
+        return checkerboard(m - 1, n) + checkerboard(m, n - 1);
+    }
+
+    /**
      * 找出连续最长数字串
+     * 如果有相同长度的串，则要一块儿输出，但是长度还是一串的长度
      */
     public static void findMaxNum(String str) {
-        int max = 0;
-        int maxIndex = 0;
+        int max = 0;//记录最大长度
+        //记录最长的数字串，采用list的有序性，先发现的先打印
+        List<String> maxList = new ArrayList<>();
         String[] ss = str.split("[^0-9]");
-        for (int i = 0; i < ss.length; i++) {
-            if (ss[i].length() > max) {
-                max = ss[i].length();
-                maxIndex = i;
+        for (String s : ss) {
+            if (s.length() >= max) {
+                max = s.length();
+                maxList.add(s);
             }
         }
-        System.out.println(ss[maxIndex] + "," + max);
+        StringBuilder longStr = new StringBuilder();
+        for (String s : maxList) {
+            if (s.length() == max) {
+                longStr.append(s);
+            }
+        }
+        System.out.println(longStr.toString() + "," + max);
     }
 
     /**
