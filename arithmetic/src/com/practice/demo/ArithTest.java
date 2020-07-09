@@ -28,8 +28,32 @@ public class ArithTest {
         //findMaxNum("abcd12345ed125ss123058789");//123058789,9
         //findMaxNum("8749r6k4nugdm04p5b1yhegi8hiq3937");//87493937,4
         //System.out.println(checkerboard(6-1, 3-1));
+        System.out.println(isLegalIp("140.131.166.86"));
 
 
+    }
+
+    /**
+     * 判断合法ip
+     */
+    public static boolean isLegalIp(String ip) {
+        if (ip == null || !ip.contains(".")) {
+            return false;
+        }
+        if (ip.startsWith("0")) {
+            return false;
+        }
+        String[] split = ip.split("\\.");
+        if (split.length != 4) {
+            return false;
+        }
+        for (String s : split) {
+            int i = Integer.parseInt(s);
+            if (i < 0 || i > 254) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
