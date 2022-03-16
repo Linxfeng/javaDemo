@@ -34,3 +34,9 @@ some about arithmetic practice demo
 
 算法相关的练习demo。
 
+## 6. rabbitmq-delay
+
+rabbitmq delay queue and dead letter queue demo
+
+rabbitmq的延迟队列和死信队列demo。
+
